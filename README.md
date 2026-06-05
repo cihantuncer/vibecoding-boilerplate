@@ -55,6 +55,18 @@ your-project/
 * **Global Agent Bootstrap:** Rename `_AGENTS.override._md` in the project root to `AGENTS.override.md` (or copy its contents to your IDE's global system instructions/rules configuration) so the agent knows how to interact with the router, MCPs, and directives.
 * **Project-specific Rules:** (Optional) Rename `.agents/rules/_common._md` to `.agents/rules/common.md` to define project-specific, always-on constraints.
 
+### Agent Bootstrap Files
+This boilerplate includes `_AGENTS.override._md` as the portable bootstrap template.
+
+Use it as follows:
+
+* **Codex:** Copy or rename it to the project/root instruction file supported by your Codex setup, or paste it into global Codex instructions.
+* **Gemini / Antigravity:** Copy its contents into `GEMINI.md` or the Gemini/Antigravity global rules file.
+* **Claude:** Copy its contents into `CLAUDE.md`, project instructions, or Claude Code custom instructions.
+* **Other agents:** Paste it into the always-on project/system instruction area.
+
+Directives under `.agents/directives/` are not self-loading. The bootstrap is what tells the agent to read `.agents/ROUTER.md`.
+
 ### 3. Initialize the Workspace (Project Bootstrap)
 When you are ready to start, give your agent a prompt to initialize (e.g., *"Read the boilerplate and initialize the workspace to build X"*):
 * The agent will trigger the bootstrap and continuation workflow (`.agents/directives/reasoning/project-continuation.md`).
