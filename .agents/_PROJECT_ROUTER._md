@@ -1,0 +1,12 @@
+# Project Router
+
+Use only for project-specific domains, conventions, and overlays. Do not duplicate the general router.
+
+Project directive indexes live at `.agents/project-directives/<topic>/INDEX.md`.
+
+Default: scan this file after `.agents/ROUTER.md`. Open at most 1 project topic index when a signal matches.
+
+## Route Map
+
+
+If no project signal matches, do not open project directives.

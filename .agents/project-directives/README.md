@@ -1,0 +1,1 @@
+Place non-rules but guideline-like instructions related to the project in this folder. While rules are always read by agents, here we leave the decision to the agent.
